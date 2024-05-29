@@ -1,0 +1,7 @@
+{% form_theme form 'form/form_errors.html.twig' %}
+
+{% for child in form.children %}
+    {% if not child.vars.valid %}
+        {{ form_errors(child) }}
+    {% endif %}
+{% endfor %}
